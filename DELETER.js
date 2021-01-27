@@ -1,14 +1,8 @@
 // ==UserScript==
 // @name          Mass Discord Message Deletion
 // @description   Extends the discord interface so you can mass delete messages from discord
-// @namespace     https://github.com/victornpb/deleteDiscordMessages
 // @version       4.1
 // @match         https://discord.com/*
-// @homepageURL   https://github.com/victornpb/deleteDiscordMessages
-// @supportURL    https://github.com/victornpb/deleteDiscordMessages/issues
-// @contributionURL https://www.buymeacoffee.com/vitim
-// @grant         none
-// @license       MIT
 // ==/UserScript==
 
 /**
@@ -25,8 +19,6 @@
  * @param {boolean} includeNsfw Search in NSFW channels
  * @param {function(string, Array)} extLogger Function for logging
  * @param {function} stopHndl stopHndl used for stopping
- * @author Victornpb <https://www.github.com/victornpb>
- * @see https://github.com/victornpb/deleteDiscordMessages
  */
 async function deleteMessages(authToken, authorId, guildId, channelId, minId, maxId, content, hasLink, hasFile, includeNsfw, includePinned, searchDelay, deleteDelay, extLogger, stopHndl, onProgress) {
     const start = new Date();
@@ -267,19 +259,20 @@ function initUI() {
     popover = createElm(`
     <div id="undiscord" style="display:none;">
         <div class="header">
-            DELETER
+            Mass Discord Message Deleter
+
         </div>
         <div class="form">
             <div style="display:flex;flex-wrap:wrap;">
                 <span>Authorization <a
-                        href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/authToken.md" title="Help"
+                        href=""
                         target="_blank">?</a> <button id="getToken">get</button><br>
                     <input type="password" id="authToken" placeholder="Auth Token" autofocus>*<br>
-                    <span>Author <a href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/authorId.md"
+                    <span>Author <a href=""
                             title="Help" target="_blank">?</a> <button id="getAuthor">get</button></span>
                     <br><input id="authorId" type="text" placeholder="Author ID" priv></span>
                 <span>Guild/Channel <a
-                        href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/channelId.md" title="Help"
+                        href="" title="Help"
                         target="_blank">?</a>
                     <button id="getGuildAndChannel">get</button><br>
                     <input id="guildId" type="text" placeholder="Guild ID" priv><br>
@@ -288,7 +281,7 @@ function initUI() {
                     <label for="file" title="Import list of channels from messages/index.json file"> Import: <span
                             class="btn">...</span> <input id="file" type="file" accept="application/json,.json"></label>
                 </span><br>
-                <span>Range <a href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/messageId.md"
+                <span>Range <a href=""
                         title="Help" target="_blank">?</a><br>
                     <input id="minDate" type="datetime-local" title="After" style="width:auto;"><br>
                     <input id="maxDate" type="datetime-local" title="Before" style="width:auto;"><br>
@@ -296,7 +289,7 @@ function initUI() {
                     <input id="maxId" type="text" placeholder="Before message with Id" priv><br>
                 </span>
                 <span>Search messages <a
-                        href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/filters.md" title="Help"
+                        href="" title="Help"
                         target="_blank">?</a><br>
                     <input id="content" type="text" placeholder="Containing text" priv><br>
                     <label><input id="hasLink" type="checkbox">has: link</label><br>
@@ -304,12 +297,12 @@ function initUI() {
                     <label><input id="includePinned" type="checkbox">Include pinned</label>
                 </span><br>
                 <span>Search Delay <a
-                href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/delay.md" title="Help"
+                href="" title="Help"
                 target="_blank">?</a><br>
                     <input id="searchDelay" type="number" value="100" step="100"><br>
                 </span>
                 <span>Delete Delay <a
-                href="https://github.com/victornpb/deleteDiscordMessages/blob/master/help/delay.md" title="Help"
+                href=" title="Help"
                 target="_blank">?</a><br>
                     <input id="deleteDelay" type="number" value="1000" step="100">
                 </span>
